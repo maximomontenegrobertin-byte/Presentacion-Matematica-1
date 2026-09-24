@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Figuras Matemáticas</title>
+    <style>
+        :root {
+            --primary-color: #1e293b;
+            --secondary-color: #2563eb;
+            --accent-color: #0f172a;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+
+        .slide-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .slide-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .slide-header {
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .slide-header h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .slide-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .slide-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .slide-text {
+            font-size: 1.05rem;
+        }
+
+        .slide-text ul {
+            margin-top: 1rem;
+            margin-left: 1.2rem;
+        }
+
+        .slide-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .slide-image-container {
+            text-align: center;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: #f1f5f9;
+        }
+
+        .slide-image-container img {
+            width: 100%;
+            height: 100%;
+            max-height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .slide-image-container img:hover {
+            transform: scale(1.04);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Principal -->
+    <header>
+        <h1>Explorando las Figuras Matemáticas</h1>
+        <p>Un recorrido conceptual por la geometría bidimensional, tridimensional y los fractales</p>
+    </header>
+
+    <!-- Navegación Rápida -->
+    <nav>
+        <a href="#seccion1">1. Figuras Planas</a>
+        <a href="#seccion2">2. Cuerpos Geométricos</a>
+        <a href="#seccion3">3. Geometría Fractal</a>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+
+        <!-- Sección 1: Figuras Planas (2D) -->
+        <section id="seccion1" class="slide-section">
+            <div class="slide-header">
+                <h2>1. Figuras Geométricas Planas (2D)</h2>
+            </div>
+            <div class="slide-content">
+                <div class="slide-text">
+                    <p>Las figuras planas poseen dos dimensiones: ancho y largo. Carecen de profundidad y están compuestas por bordes rectos o curvos dentro de un mismo plano.</p>
+                    <ul>
+                        <li><strong>Polígonos:</strong> Triángulos, cuadrados, rectángulos y pentágonos.</li>
+                        <li><strong>Curvas cerradas:</strong> Círculos y elipses.</li>
+                        <li><strong>Medidas principales:</strong> Perímetro y área.</li>
+                    </ul>
+                </div>
+                <div class="slide-image-container">
+                    <img src="images/matematica1.jpg" alt="Figuras geométricas planas (triángulo y cuadrado)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Cuerpos Geométricos (3D) -->
+        <section id="seccion2" class="slide-section">
+            <div class="slide-header">
+                <h2>2. Cuerpos Geométricos Tridimensionales (3D)</h2>
+            </div>
+            <div class="slide-content">
+                <div class="slide-text">
+                    <p>Los cuerpos tridimensionales ocupan un volumen en el espacio real. Se definen por tres dimensiones: largo, ancho y alto.</p>
+                    <ul>
+                        <li><strong>Poliedros:</strong> Cubos, pirámides y prismas.</li>
+                        <li><strong>Cuerpos redondos:</strong> Esferas, cilindros y conos.</li>
+                        <li><strong>Medidas principales:</strong> Área de superficie y volumen.</li>
+                    </ul>
+                </div>
+                <div class="slide-image-container">
+                    <img src="images/matematica2.jpg" alt="Cuerpos tridimensionales (pirámide y cubo)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Geometría Fractal y Aplicaciones -->
+        <section id="seccion3" class="slide-section">
+            <div class="slide-header">
+                <h2>3. Geometría Fractal y Patrones Complejos</h2>
+            </div>
+            <p class="slide-text">
+                Un fractal es una estructura geométrica que se repite a diferentes escalas (autosimilitud). A continuación se muestran representaciones clave del estudio de patrones complejos en matemáticas:
+            </p>
+            <div class="gallery-grid">
+                <div class="slide-image-container">
+                    <img src="images/matematica3.jpg" alt="Conjunto de Mandelbrot - Vista general">
+                </div>
+                <div class="slide-image-container">
+                    <img src="images/matematica4.jpg" alt="Conjunto de Mandelbrot - Detalle en zoom">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; Presentación sobre Figuras Matemáticas</p>
+    </footer>
+
+</body>
+</html>
